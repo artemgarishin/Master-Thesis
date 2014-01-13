@@ -1,0 +1,68 @@
+TODO: review this subsection
+\\
+The problem of comparing two graphs is known for a long time 
+and it is one of the fundamental problems of graph theory.
+A. V. Aho, J. E. Hopcroft, and J. D. Ullman present in their book \textit{The Design and
+Analysis of Computer Algorithms}  \cite{aho_hopcroft_ulman_algorithms}
+algorithms for solving
+general problems of subtree isomorphism, largest common subtree and smallest common supertree.
+%
+S. M. Selkow defined the Top-Down subtree isomorphism \cite{selkow_tree_top_down}.
+A definition of  the Bottom-Up subtree isomorphism was introduced by G. Valiente 
+in  \cite{valiente_tree_bottom_up_1}, \cite{valiente_tree_bottom_up_2}.
+A systematic review of efficient subtree isomorphism algorithms can be found in his book
+\textit{Algorithms on Trees and Graphs} \cite{Valiente_algorithms_tree}.
+%
+The Top-Down and Bottom-Up subtree isomorphism algorithms are used in our proposal
+to compare the reduced graphs as trees.
+%In our approach control flow graphs have to be transformed into trees.
+After the trees have been  compared, the differences are represented 
+in graphs, from which the trees have been derived.
+
+There are a number of publications that deal with the comparison of program code.
+W. Yang presents an approach  to compare the structure of two programs by using the subtree isomorphism 
+%in his  paper \textit{Identifying syntactic differences between two programs} 
+\cite{yang_tree_top_down}.
+%
+Tobias Sager introduced an approach and a tool that measures similarity 
+between Java classes \cite{dipl_thesis_sager}.
+The tool calculates similarity by using different subtree isomorphism algorithms 
+on syntax tree representations of source code.
+%
+Compared to our proposal, in both approaches syntax trees derived from the source code are used 
+instead of control flow graphs. 
+The problem is reduced to subtree isomorphism which can be solved in linear time. 
+Unfortunately, this approach can not be applied directly for the comparison of two control flow graphs.
+
+%%%%
+Laski and Szermer present an algorithm that  finds differences 
+of two programs by comparing control flow graphs
+\cite{laski_szemer_prog_modification}. 
+In their paper they address the problem of the revalidation of a modified code in software maintenance.
+The modifications are localized by using the control flow graphs of the original and modified programs. 
+Both flow graphs are transformed into reduced flow graphs, 
+between which an isomorphic correspondence is calculated.
+%
+A similar work and a further improvement of the algorithm can be found in \cite{apiwattanapong_orso_jdiff}.
+The authors introduced a hammock matching algorithm  based on Laski and Szermer's algorithm.
+%
+This algorithm uses hammocks and reduced hammock graphs.
+Hammocks are subgraphs \cite{ferrante_hamock} which provide a way to impose 
+a hierarchical structure on the control flow graph for matching.
+%
+This approach is very close to our proposal.
+In our approach a different type of control flow graph reduction is performed
+%The graph is reduced to a tree 
+and the comparison is based on subtree isomorphism.
+%%%%
+
+Furthermore the problem of comparing the structure of two graphs
+can be turned into determining the similarity of two graphs,
+which is generally referred to as graph matching problem.
+There are a number of publications of graph matching algorithms.
+The graph matching has been applied to semantic networks \cite{ehring_semantic_networks}, 
+recognition of graphical symbols \cite{jiang_graphical_symbols}, 
+three-dimensional object recognition \cite{wong_model_matching}, 
+and others.
+But the applications and algorithms have a very low relevance to our approach 
+because the graphs have always specific properties according to the field of application.
