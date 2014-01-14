@@ -1,5 +1,5 @@
 Goal of this work is to search out the most optimal ways to compare different pieces of code. So far there are two techniques of code comparison: a normal text comparison and graph compare. 
-Two, similar but not same, pieces of source code must be selected and researched to detect any distinction. These steps can be approached by following:
+Two pieces of source code, similar but not same, must be selected and researched to detect any distinction. These steps can be approached by following:
 
 \begin{enumerate}
   \item Research on source code using existing methods to compare:
@@ -20,12 +20,19 @@ Two, similar but not same, pieces of source code must be selected and researched
 \end{enumerate}
 
 	
-Play around with patterns of code changing variables, names, sequences of commands and use simple "text to text" compare. In parallel create a control flow graphs and using implemented algorithms TopDown and BottomUp figure out the difference. Compare these both differences and declare received results.
+Play around with patterns of code changing variables, names, sequences of commands and use simple "text to text" compare. In parallel create a control flow graphs and using implemented algorithms TopDown and BottomUp, figure out the difference. Compare these both differences and declare received results.
 The results can be: 
 \begin{enumerate}
   \item same difference
   \item similar difference
   \item full difference
 \end{enumerate}
-In case similar or full difference a combination of both methods or new implementation of algorithms can be further developed. 
+In case similar or full difference results, a combination of both methods can be used for optimal comparison. 
 
+Example: we have have two functions that look very similar but nevertheless they have different number of string and different functionality. The abstract results can be following:
+\begin{enumerate}
+	\item Text compare shows that strings 1 and 5 are different
+	\item Graph compare shows that string 7 is different 
+\end{enumerate}
+
+Thus combination of two methods can explicit that strings 1,5 and 7 are distinguished and much more distinction has been found.
