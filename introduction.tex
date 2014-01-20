@@ -1,17 +1,16 @@
-The Control Flow Graph Comparison is important in several fields of application such as efficient testing programs, merging between two versions of software, testing compiler optimization and code instrumentation tools.
+\chapter{Introduction}
+\label{cha:Introduction}
 
-To compare the structure of two control flow graphs it is essential to know if one graph contains the structure of the second graph. A computational task in which two graphs $G_1$ and $G_2$ are given as input, and one must determine whether $G_1$ contains a subgraph that has the same structure as the graph $G_2$, is called  the subgraph isomorphism problem. 
-%One also says the graph $G_1$ is isomorphic to graph $G_2$.  
-The subgraph isomorphism problem is a fundamental problem in graph theory and it is known 
-to be NP-complete \cite{ulman_isomorphism}. 
-%Ullmann (1976) describes a recursive backtracking procedure for solving the subgraph isomorphism problem.
-Fortunately polynomial-time algorithms for the subgraph isomorphism problem
-are known for trees \cite{matula_alg_subtree_isomorphism}, 
-two-connected outerplanar graphs \cite{lingas_isomorphism_outerplanar_graphs}, 
-and two-connected series-parallel graphs \cite{lingas_isomorphism_2connected_graphs}.
+\section{Graph theory to compare programming code}
 
-In this paper we present the implementation of algorithms for comparison two graphs built from code in Dr. Garbage project. Combination of the algorithms Top-Down and Bottom-Up is suitable instrument to define isomorphism of trees constructed from graphs.As a first step, the clear graph theory is being considered, thereby the content of nodes and order of edges are not important to solve graph isomorphism problem. Therefore the unordered tree isomorphism says following: two unordered trees are isomorphic if there is a bijective correspondence between their node sets which preserves and reflects the structure of the trees - that ism such that the node corresponding to the root of one tree is the root of other tree, and a node $v_1$ is the parent of a node $v_2$ if and only if the node corresponding to $v_1$ is the parent of node corresponding to $v_2$ in the other tree \cite{Valiente_algorithms_tree}. In other words when nodes in two unordered trees are permuted and have different structure, but the connections among the nodes are same, it means the trees are isomorph.
+Modern methods to compare of programming pieces of code are used to analyse code's changing, to explore development process and so on. Basically in current tools or plug-ins only text compare methods are used, that is not full sufficient to define code compare.
+Sometimes another techniques can be very helpful for such purposes. One of them is a structural code compare, based on building a trees, and methods to compare any similar or same structures.
 
-All  algorithms presented in this paper have been implemented 
-in the context of the Dr. Garbage tool suite
-\cite{tools_drgarbage} and we present some experimental results and statistics of our implementation in section \ref{experimental_results}.
+<temp>
+You can't write a good introduction until you know what the body of the paper says. Consider writing the introductory section(s) after you have completed the rest of the paper, rather than before.
+
+Be sure to include a hook at the beginning of the introduction. This is a statement of something sufficiently interesting to motivate your reader to read the rest of the paper, it is an important/interesting scientific problem that your paper either solves or addresses. You should draw the reader in and make them want to read the rest of the paper. 
+
+some tips:
+A statement of the goal of the paper: why the study was undertaken, or why the paper was written. Do not repeat the abstract. 
+</temp>
