@@ -4,6 +4,8 @@
 *.aux
 *.bbl
 *.blg
+*.bib
+*.bcf
 *.dvi
 *.fdb_latexmk
 *.glg
@@ -27,11 +29,16 @@
 *.snm
 *.synctex.gz
 *.toc
+*.tcp
+*.tps
+*.tco
+*.txt
 *.vrb
 *.xdy
 *.tdo
 *.pdf
 *.fls
+*.xml
 /latex
 *.*~
 
