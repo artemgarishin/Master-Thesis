@@ -5,6 +5,35 @@ In this chapter an issue of the work is being explained. As usual a compare of t
 
 There are many purposes to compare a code, to find out a similarity or determine a difference between them. One of the option is to search for plagiarism in case a code can be taken from external source and a variables have been changed. In addition a general search can be improved to look out a similar code in big projects.
 
+<deploy>
+
+Code is transformed into graphs
+there is no deterministic algorithms to compare them because of loops
+Graphs - NP complete
+The structural compare of trees is not NP-complete problem, it is the reason to compare trees
+for trees - yes, graph is into tree transformed
+
+we need to reduce the problem
+we can compare in polynomial time compare trees.
+
+code we transform in tree:
+2 questions:
+ 1. how we transform code in tree
+ 2. how we compare
+ 3. how we reference code and nodes
+ 
+ how i can come from code -> graph
+small example, what kind of  result gives text compare(just string compare)
+ public void ast1(){
+		if(i > 1) i++;
+	}
+	
+	public void ast1(){
+		if(i > 1) 
+		i++;
+	}
+</deploy>
+
 To investigate code comparison, four algorithms of structural compare are required.
 To make a contribution into development of structured code compare, the following tasks should be explored:
 
@@ -15,4 +44,3 @@ To make a contribution into development of structured code compare, the followin
    \item Experimental results of compare must be derived.
 \end{enumerate}
 
-The structural compare of trees is not NP-complete problem.
