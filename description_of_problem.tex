@@ -13,6 +13,10 @@ Graphs - NP complete
 The structural compare of trees is not NP-complete problem, it is the reason to compare trees
 for trees - yes, graph is into tree transformed
 
+TASK: create a pieces of code and compare them
+
+
+
 we need to reduce the problem
 we can compare in polynomial time compare trees.
 
@@ -20,10 +24,17 @@ code we transform in tree:
 2 questions:
  1. how we transform code in tree
  2. how we compare
- 3. how we reference code and nodes
+ 3. how we reference code and nodes(how we put the code difference)
  
- how i can come from code -> graph
-small example, what kind of  result gives text compare(just string compare)
+Result must be: source code and difference
+ 
+how i can come from code -> graph
+2 strategies:
+
+1. AST from source code(briefly explain what it is)	+ experiments
+2. 
+small example, what kind of result gives text compare(just string compare) and AST
+
  public void ast1(){
 		if(i > 1) i++;
 	}
@@ -32,6 +43,20 @@ small example, what kind of  result gives text compare(just string compare)
 		if(i > 1) 
 		i++;
 	}
+	
+For byte code:
+spanning tree is created so: one edge in the end is deleted(draw how it deleted and why)
+
+can be optimized: byte code has a number
+
+related works(?)
+find some works, where nobody was working before(AST optimize)
+
+IDEA: text difference highlight and in parallel nodes in Tree marks and Matching
+(TODO: make some experiments, if it's ok, better, worse or same compare)
+
+Statistic + manuel
+	
 </deploy>
 
 To investigate code comparison, four algorithms of structural compare are required.
