@@ -1,40 +1,53 @@
-\chapter{Experimental results}
+\chapter{Code compare experiments}
 \label{chap:experimental}
-\section{Experiments}
-These steps can be approached by following:
+\section{Introduction in experiments}
+
+For better understanding of possible "code compare" concept, possible ideas of implementation and following development an amount of experiments are required.
+In order to build a proper tool or at least a concept, in Eclipse plugins at Dr. Garbage Community\textregistered \enspace some hand experiments in code should be fulfilled.
+
+All these test cases are performed in Eclipse IDE \cite{eclipse_site} and divided into blocks. These steps can be approached by following:
 
 \begin{enumerate}
-  \item Research on source code using existing methods to compare:
+  \item Research on Java source code using existing methods to compare:
   	\begin{enumerate}
-   	 	\item normal text compare
-   		 \item spanning trees transformed from control flow graphs
+   	 	\item Normal text compare
+   		 \item Spanning trees transformed from control flow graphs
 	 \end{enumerate}	
-  \item Research on source code using existing methods to compare:
+	 
+  \item Research on Java source code using existing methods to compare:
   \begin{enumerate}
-    \item abstract trees
-    \item spanning trees transformed from control flow graphs
+    \item Normal text compare 
+    \item Abstract syntax trees
   \end{enumerate}
-  \item Research on byte code using existing methods to compare:
+  
+  \item Research on Java byte code using existing methods to compare:
   \begin{enumerate}
-    \item normal text compare
-    \item spanning trees transformed from control flow graphs
+    \item Normal text compare 
+    \item Control flow graphs
   \end{enumerate}
 \end{enumerate}
 
-	
-Play around with patterns of code changing variables, names, sequences of commands and use simple "text to text" compare. In parallel create a control flow graphs and using implemented algorithms Top-Down and Bottom-Up, figure out the difference. Compare these both differences and declare received results.
-The results can be: 
+All test set are investigated under Java methods and functions. Playing around with the patterns of code changing variables, names, sequences of commands, adding loops or conditions and apply simple "text to text" compare. This "text compare is already implemented in Eclipse IDE, so-called command "compare with each other by member". This type of comparison provides a pop-up window, where two pieces of code are compared, line by line.
+
+In parallel a control flow graphs or source graphs from the functions are being created and compared using implemented algorithms Top-Down and Bottom-Up(following called: TD&BU). The further task is to figure out the difference/similarity from graphical visual comparison. Consequently these both results must be matched and recorded for succeeding research.
+
+The derived results from can be as follows: 
 \begin{enumerate}
-  \item same difference
-  \item similar difference
-  \item full difference
+  \item Text compare and TD&BU have same difference
+  \item Text compare and TD&BU give similar difference
+  \item Text compare and TD&BU five full difference
 \end{enumerate}
-In case similar or full difference results, a combination of both methods can be used for optimal comparison. 
 
-Example: we have have two functions that look very similar but nevertheless they have different number of string and different functionality. The abstract results can be following:
+Hence, as it was declared in section description of problem, based on these results can be decided what kind of tool in Dr. Garbage Eclipse plug-ins can be built.In case similar or full difference results, a combination of both methods can be used for optimal comparison. 
+
+Small example can be demonstrated: there are two functions that look very similar but nevertheless they have different number of string and different functionality. The abstract results can be following:
 \begin{enumerate}
 	\item Text compare shows that strings 1 and 5 are different
 	\item Graph compare shows that string 7 is different 
 \end{enumerate}
 
-Thus combination of two methods can explicit that strings 1,5 and 7 are distinguished and much more distinction has been found.
+Conclusion: a combination of two methods can explicit that strings 1,5 and 7 are distinguished and much more distinction has been found. Thus it provides an optimal way of investigation.
+
+\section{Experiments on Java source code}
+
+
