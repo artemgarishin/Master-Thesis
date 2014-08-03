@@ -1,6 +1,6 @@
 \chapter{Code compare experiments}
 \label{chap:experimental}
-\section{Introduction in experiments}
+\section{Introduction to experiments}
 
 For better understanding of possible "code compare" concept, possible ideas of implementation and following development an amount of experiments are required.
 In order to build a proper tool or at least a concept, in Eclipse plugins at Dr. Garbage Community\textregistered \enspace some hand experiments in code should be fulfilled.
@@ -29,13 +29,13 @@ All these test cases are performed in Eclipse IDE \cite{eclipse_site} and divide
 
 All test set are investigated under Java methods and functions. Playing around with the patterns of code changing variables, names, sequences of commands, adding loops or conditions and apply simple "text to text" compare. This "text compare is already implemented in Eclipse IDE, so-called command "compare with each other by member". This type of comparison provides a pop-up window, where two pieces of code are compared, line by line.
 
-In parallel a control flow graphs or source graphs from the functions are being created and compared using implemented algorithms Top-Down and Bottom-Up(following called: TD&BU). The further task is to figure out the difference/similarity from graphical visual comparison. Consequently these both results must be matched and recorded for succeeding research.
+In parallel a control flow graphs or source graphs from the functions are being created and compared using implemented algorithms Top-Down and Bottom-Up(following called: TD\& BU). The further task is to figure out the difference/similarity from graphical visual comparison. Consequently these both results must be matched and recorded for succeeding research.
 
 The derived results from can be as follows: 
 \begin{enumerate}
-  \item Text compare and TD&BU have same difference
-  \item Text compare and TD&BU give similar difference
-  \item Text compare and TD&BU five full difference
+  \item Text compare and TD\& BU have same difference
+  \item Text compare and TD\& BU give similar difference
+  \item Text compare and TD\& BU five full difference
 \end{enumerate}
 
 Hence, as it was declared in section description of problem, based on these results can be decided what kind of tool in Dr. Garbage Eclipse plug-ins can be built.In case similar or full difference results, a combination of both methods can be used for optimal comparison. 
@@ -50,4 +50,13 @@ Conclusion: a combination of two methods can explicit that strings 1,5 and 7 are
 
 \section{Experiments on Java source code}
 
+In this section a sequence of actions and following statistic are represented. The steps are carried through sequence of action:
+\begin{itemize}
+	\item Write two similar functions in Eclipse IDE
+	\item Apply for them text-to-text comparison
+	\item Declare the statistic, respectively how many lines are different		
+	\item Create a source-code graph for both
+	\item Apply TD\& BU algorithms to get structural difference	
+	\item Declare the statistic, respectively how many nodes are different			
+\end{itemize}
 
